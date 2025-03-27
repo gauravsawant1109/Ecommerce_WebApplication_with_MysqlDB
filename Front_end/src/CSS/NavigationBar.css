@@ -1,0 +1,47 @@
+
+
+.cu-NavigationBar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    background-color: #2cc3ff;
+    /* background: linear-gradient(to right, #01251E, #006B58, #E6A100); */
+  }
+  
+  .navbarLogo {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbarLogo:hover {
+    transform: scale(1.1);
+  }
+  
+  .navbar-nav .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #007bff !important;
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: #0056b3 !important;
+    font-weight: 600;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  
+  .navbar-collapse {
+    transition: all 0.4s ease-in-out;
+  }
+  

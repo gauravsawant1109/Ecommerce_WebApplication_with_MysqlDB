@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+h2 {
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Category and Brand Selection */
+.overflow-x-scroll {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    scrollbar-width: thin;
+}
+
+.overflow-x-scroll::-webkit-scrollbar {
+    height: 5px;
+}
+
+.overflow-x-scroll::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 10px;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+
+    width: 100px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Cards */
+.cu-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cu-card:hover {
+    transform: scale(1.05);
+}
+
+.cu-card img {
+    border-bottom: 2px solid #007bff46;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Filter Icon */
+.text-primary {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.text-primary:hover {
+    color: #0056b3;
+}

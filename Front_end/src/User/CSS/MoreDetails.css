@@ -1,0 +1,140 @@
+/* MoreDetails.css */
+
+.product-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 50px auto;
+    gap: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Product Image Section */
+  .product-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-image {
+    width: 450px;
+    height: 500px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #f8f8f8;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Product Details */
+  .product-info {
+    flex: 1;
+  }
+  
+  .product-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #b12704;
+    margin-bottom: 10px;
+  }
+  
+  .product-description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .product-stock {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .in-stock {
+    color: #007600;
+  }
+  
+  .out-of-stock {
+    color: #b12704;
+  }
+  
+  .brand-category {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  /* Buy Buttons */
+  .buy-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .buy-now,
+  .add-to-cart {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: none;
+  }
+  
+  .buy-now {
+    background-color: #ff9900;
+    color: white;
+  }
+  
+  .buy-now:hover {
+    background-color: #e68900;
+  }
+  
+  .add-to-cart {
+    background-color: #f0c14b;
+    color: #111;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #ddb347;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .product-detail-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+    }
+  
+    .product-image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .buy-buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .buy-now, .add-to-cart {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  

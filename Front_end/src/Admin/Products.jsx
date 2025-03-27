@@ -173,7 +173,7 @@ console.log("SelectedProduct",SelectedProduct)
         <h4 className="text-center m-0 ">Products Not Found</h4>
       )}
 
-      {SelectedProduct.length!=0 && (
+      {SelectedProduct && (
         <>
           <ProductEditModule 
           Show={ShowEditModal}

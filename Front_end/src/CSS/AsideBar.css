@@ -1,0 +1,137 @@
+/* AsideBar.css */
+
+.cu-AsideBar {
+    width: 35rem;
+    height: 280px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    background-color: #f8f9fa;
+  }
+  
+  .cu-AsideBar .container-fluid {
+    border-radius: 12px;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  
+  .navbar-collapse {
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 10px;
+  }
+  
+  .cu-AsideBar .navbar-nav {
+    width: 100%;
+  }
+  
+  .cu-AsideBarli {
+    width: 100%;
+    text-align: center;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    border-radius: 8px;
+    margin: 5px 0;
+    padding: 10px;
+  }
+  
+  .cu-AsideBarli:hover {
+    background-color: #60a7f3;
+    border-radius: 8px;
+    transform: scale(1.05);
+    
+  }
+  
+  .cu-AsideBarli .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+    display: block;
+  }
+  
+  .cu-AsideBarli .nav-link:hover {
+    color: #ffffff !important;
+  }
+  
+  .cu-AsideBarli .nav-link.active {
+    color: #0056b3 !important;
+    font-weight: 600;
+  }
+
+/* .cu-AsideBarli{
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+}
+.cu-AsideBarli :hover{
+    background-color: rgb(220, 220, 220);
+} */
+
+/* AsideBar.css */
+/* .navbar {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .container-fluid {
+    border-radius: 12px;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  
+  .navbar-collapse {
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 10px;
+  }
+  
+  .navbar-nav {
+    width: 100%;
+  }
+  
+  .nav-item {
+    width: 100%;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+    border-radius: 8px;
+    margin: 5px 0;
+  }
+  
+  .nav-item:hover {
+    background-color: #007bff;
+    border-radius: 8px;
+  }
+  
+  .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+    display: block;
+  }
+  
+  .nav-link:hover {
+    color: #ffffff !important;
+  }
+  
+  .nav-link.active {
+    color: #0056b3 !important;
+    font-weight: 600;
+  }
+   */

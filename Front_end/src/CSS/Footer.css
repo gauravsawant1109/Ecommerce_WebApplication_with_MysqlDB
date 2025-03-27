@@ -1,0 +1,49 @@
+
+.footer {
+  height: auto;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* background-color: #fff; */
+    /* padding: 30px 50px; */
+    /* border-top: 1px solid black; */
+    /* background-image: linear-gradient( 90.6deg,  #00523F  , #FFC42A ); */
+    background-image: url('../assets/FooterImage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  .footer-column h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .footer-column ul li:hover {
+    text-decoration: underline;
+  }
+  
+  .follow-us .instagram-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
