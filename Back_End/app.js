@@ -4,6 +4,7 @@ import userRouter from './Routes/userRouter.js'
 import productRouter from "./Routes/productRoutes.js";
 import categoryRouter from './Routes/categoryRoutes.js';
 import brandRouter from "./Routes/brandRoutes.js";
+import AddToCartRouter from "./Routes/AddToCartRoutes.js"
 import path from 'path'
 import { dirname } from 'path';
 const app = express();
@@ -22,7 +23,7 @@ app.use('/user', userRouter)
 app.use('/product', productRouter)
 app.use('/category', categoryRouter)
 app.use('/brand', brandRouter)
-
+app.use('/AddToCart',AddToCartRouter)
 
 // Connection
 const PORT = 5000
