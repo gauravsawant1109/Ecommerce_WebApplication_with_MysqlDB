@@ -10,7 +10,7 @@ function login(req, res) {
             console.log("result ",result[0]);
             const payload = {id:result[0].id,role:result[0].role};
             console.log("user data from database",payload);
-            const token = jwt.sign(payload,'batch40',{expiresIn:'1h'})
+            const token = jwt.sign(payload,'batch40',{expiresIn:'1d'})
             console.log("token :" , token);
             
                 res.status(200).send({ success: true,token: token , message : 'Login successfull'});
