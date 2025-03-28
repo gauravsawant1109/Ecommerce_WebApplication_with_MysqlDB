@@ -2,12 +2,37 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../CSS/MoreDetails.css";
+import AddToCartService from "../../Servises/AddToCartService";
+import authService from "../../Servises/authService";
 const MoreDetails = () => {
   const { product_id } = useParams();
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [category, setCategory] = useState(null);
   const [brand, setBrand] = useState(null);
-  
+  const [id,setUserId]=useState()
+
+    // getUserInfo for id
+ async function getUserInfo(){
+  const response = await authService.getUser()
+  setUserId(response.id)
+}
+console.log("id",id);
+
+const handleAddToCart = async (product) => {
+      try {
+          const response = await AddToCartService.addToCart(id, product.product_id )
+
+          if (response.data.success) {
+            alert(response.data.message)
+              // fetchCartItems(); 
+          } else {
+              alert(response.data.message);
+          }
+      } catch (error) { 
+          console.error("Error adding product to cart:", error);
+      }
+  };
+
   useEffect(() => {
     async function fetchProduct() {
       try {
@@ -22,6 +47,7 @@ const MoreDetails = () => {
       }
     }
     fetchProduct();
+    getUserInfo()
   }, [product_id]);
 
   useEffect(() => {
@@ -76,7 +102,7 @@ const MoreDetails = () => {
 
         <div className="buy-buttons">
           {/* <button className="buy-now">Buy Now</button> */}
-          <button className="buy-now">Add to Cart</button>
+          <button className="buy-now" onClick={()=>handleAddToCart(selectedProduct)}>Add to Cart</button>
         </div>
       </div>
     </div>
