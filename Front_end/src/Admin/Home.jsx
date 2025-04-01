@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate } from "react-router-dom";
-import AsideBar from './AsideBar';
+import AsideBar from './AsideBar';  
 import Products from './Products';
 import AddCategory from './AddCategory';
 import Category from './Category';
