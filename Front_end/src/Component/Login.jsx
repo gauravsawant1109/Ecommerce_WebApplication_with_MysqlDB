@@ -60,9 +60,10 @@ const Login = () => {
            <Link to="/Registration" className="text-center text-white ">
               <p className="RegistrationLink">To Registration</p>
             </Link>
-            <Link to="/AdminPassReset" className="text-center text-white ">
+
+           {/* <Link to="/AdminPassReset" className="text-center text-white ">
               <p className="RegistrationLink">Reset Password</p>
-            </Link>
+            </Link>*/}
            </div>
             {/* <Link to="/Home" className="m-auto"> */}
               <button

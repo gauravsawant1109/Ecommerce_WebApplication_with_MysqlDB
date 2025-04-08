@@ -6,7 +6,7 @@ import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 import { FaFilter } from "react-icons/fa";
 import ProductFilterModule from "./userProduct/ProductFilterModule";
-import "./CSS/UserProducts.css"
+import "./CSS/UserProducts.css";
 import AddToCartService from "../Servises/AddToCartService";
 import authService from "../Servises/authService";
 const UserProducts = () => {
@@ -17,14 +17,14 @@ const UserProducts = () => {
   const [brands, setBrands] = useState([]);
   const [SelectedCategory, setSelectedCategory] = useState([]);
   const [ShowFilterModal, setShowFilterModal] = useState(false);
-  const [id,setUserId]=useState(null)
+  const [id, setUserId] = useState(null);
   const [filteredData, setFilteredData] = useState({
     selectedCategory: null,
     selectedBrand: null,
   });
 
   const navigate = useNavigate();
-  async function filterProduct(e) {
+  async function filterProductBar(e) {
     e.preventDefault();
     try {
       const response = await axios.get(
@@ -42,13 +42,12 @@ const UserProducts = () => {
     navigate(`/UserHome/SelectedCategory/${categoryId}`);
   };
 
-  
+  function handleSelectedBrand(brandID) {
+    navigate(`/UserHome/SelectedBrand/${brandID}`);
+  }
 
-function handleSelectedBrand (brandID){
-  navigate(`/UserHome/SelectedBrand/${brandID}`);
-}
-
-  async function filterProduct() {
+  async function filterProduct(e) {
+    e.preventDefault();
     try {
       const { selectedCategory, selectedBrand } = filteredData;
       const queryParams = new URLSearchParams();
@@ -69,26 +68,25 @@ function handleSelectedBrand (brandID){
   }
 
   // getUserInfo for id
- async function getUserInfo(){
-    const response = await authService.getUser()
-    setUserId(response.id)
+  async function getUserInfo() {
+    const response = await authService.getUser();
+    setUserId(response.id);
   }
 
- const handleAddToCart = async (product) => {
-        try {
-            const response = await AddToCartService.addToCart(id, product.product_id )
+  const handleAddToCart = async (product) => {
+    try {
+      const response = await AddToCartService.addToCart(id, product.product_id);
 
-            if (response.data.success) {
-              alert(response.data.message)
-                // fetchCartItems(); 
-            } else {
-                alert(response.data.message);
-            }
-        } catch (error) {
-            console.error("Error adding product to cart:", error);
-        }
-    };
-
+      if (response.data.success) {
+        alert(response.data.message);
+        // fetchCartItems();
+      } else {
+        alert(response.data.message);
+      }
+    } catch (error) {
+      console.error("Error adding product to cart:", error);
+    }
+  };
 
   async function fetchData() {
     // all Product
@@ -121,7 +119,7 @@ function handleSelectedBrand (brandID){
     if (filteredData.selectedCategory || filteredData.selectedBrand) {
       filterProduct();
     }
-    getUserInfo()
+    getUserInfo();
   }, [filteredData]);
 
   console.log("product List: ", Products);
@@ -200,7 +198,7 @@ function handleSelectedBrand (brandID){
       {/* search Bar  */}
 
       <div className="text-center">
-        <form onSubmit={filterProduct}>
+        <form onSubmit={filterProductBar}>
           <input
             type="text"
             value={FilterProduct}
@@ -242,7 +240,7 @@ function handleSelectedBrand (brandID){
                     <button
                       href="#"
                       class="btn btn-primary p-1"
-                      onClick={()=>handleAddToCart(product)}
+                      onClick={() => handleAddToCart(product)}
                     >
                       AddToCart
                     </button>
@@ -262,8 +260,6 @@ function handleSelectedBrand (brandID){
         ) : (
           <h1 className="text-center">Product Not Found</h1>
         )}
-
-       
       </div>
       {ShowFilterModal && (
         <ProductFilterModule
@@ -272,7 +268,6 @@ function handleSelectedBrand (brandID){
           setFilteredData={setFilteredData}
         />
       )}
-  
     </>
   );
 };
